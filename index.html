@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Document</title>
+  </head>
+</head>
+<body>
+    <div id="app">
+
+
+        <header>
+            <div class="text-center">
+            <h1>{{title}}</h1>
+            </div>
+            </header>
+        <main class="text-center">
+        
+            <!-- <div id="cajon">
+                <p v-show="mostrarMensaje" :class="[(classShow)? warning : amarillo, textoChico]" >Test show</p>
+            </div>
+            <div >
+                <button v-on:click="showHide()">
+                    <p v-if="mostrarMensaje">Esconder Texto</p>
+                    <p v-if="!mostrarMensaje">Mostrar Texto</p>
+                </button>
+            </div> -->
+            <div>
+                <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Dead or Alive?</th>
+                        <th>Gender</th>
+               
+                    </tr>
+                </thead>
+                <tbody>
+            
+                    <tr v-for="datos,i in info" :class="[(i%2 == 0)? par : odd]">
+                        <td>
+                            {{datos.name}}
+                        </td>
+                        <td>{{datos.species}}</td>
+                        <td>{{datos.status}}</td>
+                        <td>{{datos.gender}}</td>
+                    
+                    </tr>
+                   
+
+                </tbody>
+            </table>
+
+            </div>
+            <div v-for="datos,i of info" >
+
+                    <img :src="datos.image" :alt="datos.name">
+                    <div>
+                        <h3 :style="{color: blanco} ">{{i+1}}. {{datos.name}}</h3>
+                        <p  :style="elementosCss"> {{datos.species}}, {{datos.gender}}  </p>
+
+                    </div>
+                
+            </div>
+            <!-- v-for 
+            
+            
+            -->
+
+        </main>
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    
+    <script src="./app.js" type="module"></script>
+</body>
+</html>

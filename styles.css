@@ -1,0 +1,34 @@
+
+#app{
+    padding: 35px;
+
+  }
+
+  header{
+    text-align: center;
+
+  }
+
+  #cajon{
+    height: 50px;
+  }
+
+  .bg-warning-test{
+    background-color:red;
+
+  }
+  .texto-amarillo{
+    color: rgb(179, 179, 114);
+  }
+
+  .text-secondary-test{
+    font-size: 5px;
+  }
+
+  .odd {
+    background-color: lightgray;
+  }
+
+  .par {
+    background-color: lightblue;
+  }
